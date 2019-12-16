@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:orientation="vertical"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp">
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/my_event_id">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/event_title_image_card"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_margin="16dp"
+        android:elevation="10dp"
+        app:cardCornerRadius="18dp">
+
+        <ImageView
+            android:id="@+id/event_title_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/instiflo_dark_bg"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/my_events_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/event_title_image_card"
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="8dp"
+        android:text="Event Title"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="8dp"
+        android:id="@+id/event_people_going"
+        android:layout_toRightOf="@+id/event_title_image_card"
+        android:layout_below="@+id/my_events_title"
+        android:layout_marginTop="4dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:layout_toRightOf="@+id/event_title_image_card"
+            android:text="People attending - "/>
+        <TextView
+            android:id="@+id/count_people_going"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/event_title_date_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="8dp"
+        android:layout_toRightOf="@+id/event_title_image_card"
+        android:layout_below="@+id/event_people_going"
+        android:layout_marginTop="4dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@android:drawable/ic_menu_my_calendar"/>
+        <TextView
+            android:id="@+id/my_events_title_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="16/10/2019"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:layout_marginStart="2dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="8dp"
+        android:id="@+id/event_detail_time"
+        android:layout_toRightOf="@+id/event_title_image_card"
+        android:layout_below="@+id/event_title_date_layout"
+        android:layout_marginBottom="6dp"
+        android:layout_marginTop="4dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@android:drawable/ic_lock_idle_alarm" />
+        <TextView
+            android:id="@+id/my_events_title_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="8:00 PM"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:layout_marginStart="4dp"/>
+    </LinearLayout>
+</RelativeLayout>
+</androidx.cardview.widget.CardView>

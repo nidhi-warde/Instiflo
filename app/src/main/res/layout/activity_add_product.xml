@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.AddProduct">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/add_product_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:backgroundTint="@android:color/transparent"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/add_product_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:titleTextColor="@color/textColorPrimary"
+            app:theme ="@style/ToobarTheme"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/product_browse_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:background="@drawable/border_image"
+                android:scaleType="centerCrop"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/product_title_textinput_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_below="@id/product_browse_image_view"
+                android:hint="Product Title"
+                app:errorEnabled="true"
+                style="@style/Widget.Instiflo.TextInputLayout.Form">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/product_title_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:inputType="text"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/rent_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rent"
+                android:layout_below="@id/product_title_textinput_layout"
+                android:layout_marginStart="16dp"/>
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/buy_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sell"
+                android:layout_below="@id/product_title_textinput_layout"
+                android:layout_toRightOf="@id/rent_checkbox"
+                android:layout_marginStart="48dp" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/product_rent_price_textinput_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="16dp"
+                android:layout_below="@id/rent_checkbox"
+                android:hint="Product Rent Price per Day (in INR)"
+                app:errorEnabled="true"
+                style="@style/Widget.Instiflo.TextInputLayout.Form">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/product_rent_price_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+
+                    android:inputType="numberDecimal"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/product_duration_textinput_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="16dp"
+                android:layout_below="@id/product_rent_price_textinput_layout"
+                android:hint="Rent Duration (in days)"
+                app:errorEnabled="true"
+                style="@style/Widget.Instiflo.TextInputLayout.Form">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/product_rent_duration_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:inputType="numberDecimal"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/product_sell_price_textinput_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="16dp"
+                android:layout_below="@id/product_duration_textinput_layout"
+                android:hint="Product Price (in INR)"
+                app:errorEnabled="true"
+                style="@style/Widget.Instiflo.TextInputLayout.Form">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/product_sell_price_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:inputType="numberDecimal"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/product_unit_textinput_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_below="@id/product_sell_price_textinput_layout"
+                android:hint="No. of Units"
+                app:errorEnabled="true"
+                style="@style/Widget.Instiflo.TextInputLayout.Form">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/product_unit_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:inputType="number"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/product_description_textinput_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_below="@id/product_unit_textinput_layout"
+                android:hint="Product Description"
+                app:errorEnabled="true"
+                style="@style/Widget.Instiflo.TextInputLayout.Form">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/product_description_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/product_clear_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CLEAR"
+                style="@style/Widget.Instiflo.Button.TextButton"
+                android:layout_margin="16dp"
+                android:layout_below="@+id/product_description_textinput_layout"
+                android:layout_toStartOf="@+id/add_product_button"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/add_product_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Product"
+                style="@style/Widget.Instiflo.Button"
+                android:layout_margin="16dp"
+                android:layout_below="@+id/product_description_textinput_layout"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/product_browse_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_anchor="@id/product_browse_image_view"
+        app:layout_anchorGravity="bottom|end"
+        android:src="@android:drawable/ic_menu_camera"
+        app:borderWidth="0dp"
+        android:backgroundTint="@color/colorAccent"
+        android:layout_marginEnd="16dp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.AddEvent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/add_event_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:backgroundTint="@android:color/transparent"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/add_event_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:titleTextColor="@color/textColorPrimary"
+            app:theme ="@style/ToobarTheme"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="64dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/event_browse_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:background="@drawable/border_image"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toTopOf="@+id/event_title_textinput_layout"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"/>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/event_title_textinput_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="32dp"
+                android:hint="Event Title"
+                app:errorEnabled="true"
+                app:layout_constraintTop_toBottomOf="@+id/event_browse_image_view"
+                style="@style/Widget.Instiflo.TextInputLayout.Form">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/event_title_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:inputType="text"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/event_date_textinput_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:hint="Event Date"
+                app:errorEnabled="true"
+                app:layout_constraintTop_toBottomOf="@id/event_title_textinput_layout"
+                style="@style/Widget.Instiflo.TextInputLayout.Form">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/event_date_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:inputType="date"
+                    android:focusable="false"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/event_time_textinput_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:hint="Event Time"
+                app:errorEnabled="true"
+                app:layout_constraintTop_toBottomOf="@id/event_date_textinput_layout"
+                style="@style/Widget.Instiflo.TextInputLayout.Form">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/event_time_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:inputType="time"
+                    android:focusable="false"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/event_location_textinput_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:hint="Event Location"
+                app:errorEnabled="true"
+                app:layout_constraintTop_toBottomOf="@+id/event_time_textinput_layout"
+                style="@style/Widget.Instiflo.TextInputLayout.Form">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/event_location_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/event_description_textinput_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:hint="Event Description"
+                app:errorEnabled="true"
+                app:layout_constraintTop_toBottomOf="@+id/event_location_textinput_layout"
+                style="@style/Widget.Instiflo.TextInputLayout.Form">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/product_description_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/event_clear_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CLEAR"
+                style="@style/Widget.Instiflo.Button.TextButton"
+                app:layout_constraintTop_toBottomOf="@id/event_description_textinput_layout"
+                app:layout_constraintEnd_toStartOf="@id/add_event_button"
+                android:layout_margin="16dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/add_event_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Event"
+                style="@style/Widget.Instiflo.Button"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/event_description_textinput_layout"
+                android:layout_margin="16dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/event_browse_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_anchor="@id/event_browse_image_view"
+        app:layout_anchorGravity="bottom|end"
+        android:src="@android:drawable/ic_menu_camera"
+        app:borderWidth="0dp"
+        android:backgroundTint="@color/colorAccent"
+        android:layout_marginEnd="16dp" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

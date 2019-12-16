@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_events"
+        android:icon="@drawable/ic_event_black_24dp"
+        android:title="Events"
+        app:showAsAction="withText"
+        />
+
+    <item
+        android:id="@+id/menu_buy"
+        android:icon="@drawable/buy_icon"
+        android:title="Buy"
+        app:showAsAction="withText"
+        />
+
+
+    <item
+        android:id="@+id/menu_rent"
+        android:icon="@drawable/rent"
+        android:title="Rent"
+        app:showAsAction="withText"
+        />
+
+    <item
+        android:id="@+id/menu_shopping_cart"
+        android:icon="@drawable/ic_youtube_searched_for_black_24dp"
+        android:title="Lost 'N' Found" />
+</menu>

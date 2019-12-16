@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_margin="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cart_product_title"
+            android:layout_margin="8dp"
+            android:text="Product Title"
+            style="@style/TextAppearance.MaterialComponents.Headline5" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cart_product_price"
+            android:layout_below="@+id/cart_product_title"
+            android:text="Price Here"
+            style="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:layout_marginHorizontal="8dp" />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/instiflo_dark_bg"/>
+
+        <TextView
+            android:id="@+id/minus_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cart_product_price"
+            android:padding="8dp"
+            android:text="-"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cart_item_quantity"
+            android:text="0"
+            android:layout_toRightOf="@id/minus_button"
+            android:layout_below="@id/cart_product_price"
+            android:padding="8dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/plus_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cart_product_price"
+            android:layout_toRightOf="@id/cart_item_quantity"
+            android:padding="8dp"
+            android:text="+"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
